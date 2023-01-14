@@ -1,13 +1,3 @@
-import { Product } from "src/products/domain/product";
+import { InMemoryProductRepository } from "./inMemoryProductRepository";
 
-export class ProductRepository {
-  getAll() {
-    const products: Product[] = [{
-      id: '1',
-      name: 'From Repository',
-      category: 'test',
-      price: 15
-    }];
-    return products;
-  }
-}
+export default InMemoryProductRepository;

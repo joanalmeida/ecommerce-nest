@@ -1,6 +1,6 @@
 import { Product } from "src/products/domain/product";
 import { Injectable } from '@nestjs/common';
-import { ProductRepository } from "../repository/productRepository";
+import ProductRepository from "../repository/ProductRepository";
 
 @Injectable()
 export class GetProductUseCase {

@@ -6,7 +6,7 @@ export class Product {
     this.price = price;
   }
 
-  id: string;
+  id?: string;
   name: string;
   category: string;
   price: number;

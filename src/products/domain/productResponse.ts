@@ -1,18 +1,21 @@
 import { Product } from "./product";
 
 export class ProductResponse {
-  constructor(name: string, category: string, price: number) {
+  constructor(id: string, name: string, category: string, price: number) {
+    this.id = id;
     this.name = name;
     this.category = category;
     this.price = price;
   }
 
+  id: string;
   name: string;
   category: string;
   price: number;
 
   static fromDomain: (product: Product) => ProductResponse = (product: Product) => {
     return new ProductResponse(
+      product.id,
       product.name,
       product.category,
       product.price
