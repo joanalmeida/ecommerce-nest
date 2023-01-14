@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { Product } from 'src/products/domain/product';
-import { CreateProduct } from 'src/products/interfaces/createProduct.interface';
-import ProductRepository from "../repository/ProductRepository";
+import { Product } from 'src/products/application/domain/product';
+import { CreateProduct } from 'src/products/application/port/in/createProduct';
+import ProductRepository from "../port/out/ProductRepository";
 
 @Injectable()
 export class CreateProductUseCase {

@@ -1,4 +1,4 @@
-import { Product } from "src/products/domain/product";
+import { Product } from "src/products/application/domain/product";
 
 export class InMemoryProductRepository {
   products: Map<string, Product>

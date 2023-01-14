@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-import { ProductController } from './product.controller';
+import { ProductController } from './adapter/controller/product.controller';
 import { GetProductUseCase } from './application/useCase/getProductUseCase';
-import ProductRepository from './application/repository/ProductRepository';
+import ProductRepository from './application/port/out/ProductRepository';
 import { CreateProductUseCase } from './application/useCase/createProductUseCase';
 
 @Module({

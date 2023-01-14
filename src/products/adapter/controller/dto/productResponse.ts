@@ -1,4 +1,4 @@
-import { Product } from "./product";
+import { Product } from "../../../application/domain/product";
 
 export class ProductResponse {
   constructor(id: string, name: string, category: string, price: number) {

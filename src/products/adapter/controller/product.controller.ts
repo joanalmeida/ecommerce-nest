@@ -1,8 +1,8 @@
 import { Body, Controller, Get, Post, UsePipes, ValidationPipe } from '@nestjs/common';
-import { CreateProductUseCase } from './application/useCase/createProductUseCase';
-import { GetProductUseCase } from './application/useCase/getProductUseCase';
-import { Product } from './domain/product';
-import { ProductResponse } from './domain/productResponse';
+import { CreateProductUseCase } from '../../application/useCase/createProductUseCase';
+import { GetProductUseCase } from '../../application/useCase/getProductUseCase';
+import { Product } from '../../application/domain/product';
+import { ProductResponse } from './dto/productResponse';
 import { CreateProductDTO } from './dto/createProductDTO';
 
 @Controller('products')

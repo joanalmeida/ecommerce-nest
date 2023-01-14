@@ -1,5 +1,5 @@
 import { IsString, IsInt } from 'class-validator';
-import { CreateProduct } from '../interfaces/createProduct.interface';
+import { CreateProduct } from '../../../application/port/in/createProduct';
 
 export class CreateProductDTO {
   // Incredible, but not needed for Nest to create an instance of this
