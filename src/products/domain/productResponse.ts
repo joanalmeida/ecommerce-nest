@@ -1,4 +1,4 @@
-import { Product } from "./product.interface";
+import { Product } from "./product";
 
 export class ProductResponse {
   constructor(name: string, category: string, price: number) {
@@ -20,24 +20,16 @@ export class ProductResponse {
   };
 }
 
-
-
-
-// class pepe {
-//   constructor(a, b) { this.nombre = a}
-//   nombre: string;
-//   apellido: string;
-//   // static isImbecil = true;
-
-//   saludar = () => { 
-//     console.log(`Hola soy ${this.nombre} ${this.apellido}`);
-//   }
-
-//   static sosTarado = () => true;
+// export interface ProductResponse {
+//   name: string;
+//   category: string;
+//   price: number;
 // }
 
-// // const a = new pepe('pepe', 'ramirez');
-// // pepe
-// // a.saludar()
-
-// pepe.sosTarado();
+// export function fromDomain(product: Product): ProductResponse {
+//   return {
+//     name: product.name,
+//     category: product.category,
+//     price: product.price
+//   }
+// }
