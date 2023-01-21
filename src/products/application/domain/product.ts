@@ -8,6 +8,6 @@ export class Product {
 
   id?: string;
   name: string;
-  category: string;
+  category?: string;
   price: number;
 }

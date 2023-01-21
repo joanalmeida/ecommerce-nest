@@ -7,9 +7,10 @@ import ProductRepository from "../port/out/ProductRepository";
 export class CreateProductUseCase {
   constructor(private readonly productRepository: ProductRepository) {}
 
-  execute(createProductData: CreateProduct): Product {
+  execute(createProductData: CreateProduct): Promise<Product> {
     const productToSave: Product = CreateProduct.toDomain(createProductData);
-    const product: Product = this.productRepository.save(productToSave);
-    return product;
+    // const product: Product = await this.productRepository.save(productToSave);
+    // return product;
+    return null;
   }
 }
