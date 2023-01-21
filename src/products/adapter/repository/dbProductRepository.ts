@@ -1,20 +1,24 @@
 import { Product } from "src/products/application/domain/product";
-import { PrismaClient, Prisma } from '@prisma/client';
-
-const prisma = new PrismaClient();
-console.log(`Generando cliente prisma`);
+import { PrismaClient, Product as PrismaProduct } from '@prisma/client';
 
 export class DbProductRepository {
+  prisma: PrismaClient;
+
+  constructor() {
+    this.prisma = new PrismaClient();
+  }
+
+
   async getAll(): Promise<Product[]> {
-    const prismaProducts = await prisma.product.findMany();
-    const products = prismaProducts.map(this.toDomain);
+    const prismaProducts: PrismaProduct[] = await this.prisma.product.findMany();
+    const products: Product[] = prismaProducts.map(this.toDomain);
     return products;
   }
 
   save(product: Product) {
   }
 
-  toDomain(prismaProduct: any): Product {
+  toDomain(prismaProduct: PrismaProduct): Product {
     return {
       id: prismaProduct.id,
       name: prismaProduct.name,
