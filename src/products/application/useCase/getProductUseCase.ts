@@ -6,8 +6,8 @@ import ProductRepository from "../port/out/ProductRepository";
 export class GetProductUseCase {
   constructor(private readonly productRepository: ProductRepository) {}
 
-  execute(): Product[] {
-    const products = this.productRepository.getAll();
+  async execute(): Promise<Product[]> {
+    const products = await this.productRepository.getAll();
     return products;
   }
 }

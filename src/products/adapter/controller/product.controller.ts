@@ -13,8 +13,8 @@ export class ProductController {
   ) {}
 
   @Get()
-  getAll(): ProductResponse[] {
-    const products: Product[] = this.getProduct.execute();
+  async getAll(): Promise<ProductResponse[]> {
+    const products: Product[] = await this.getProduct.execute();
     const productResponses: ProductResponse[] = products.map(product => ProductResponse.fromDomain(product));
 
     return productResponses;
@@ -27,7 +27,8 @@ export class ProductController {
 
   @Post()
   create(@Body() createProductDTO: CreateProductDTO): ProductResponse {
-    const product: Product = this.createProduct.execute(createProductDTO.toDomain());
-    return ProductResponse.fromDomain(product);
+    // const product: Product = this.createProduct.execute(createProductDTO.toDomain());
+    // return ProductResponse.fromDomain(product);
+    return null;
   }
 }
