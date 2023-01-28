@@ -1,4 +1,4 @@
-import { Product } from "../../domain/product";
+import { Product } from '../../domain/product';
 
 export class CreateProduct {
   name: string;
@@ -9,7 +9,7 @@ export class CreateProduct {
     return {
       name: createProduct.name,
       category: createProduct.category,
-      price: createProduct.price
-    }
+      price: createProduct.price,
+    };
   }
 }

@@ -1,4 +1,11 @@
-import { Body, Controller, Get, Post, UsePipes, ValidationPipe } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  Post,
+  UsePipes,
+  ValidationPipe,
+} from '@nestjs/common';
 import { CreateProductUseCase } from '../../application/useCase/createProductUseCase';
 import { GetProductUseCase } from '../../application/useCase/getProductUseCase';
 import { Product } from '../../application/domain/product';
@@ -9,13 +16,15 @@ import { CreateProductDTO } from './dto/createProductDTO';
 export class ProductController {
   constructor(
     private readonly getProduct: GetProductUseCase,
-    private readonly createProduct: CreateProductUseCase
+    private readonly createProduct: CreateProductUseCase,
   ) {}
 
   @Get()
   async getAll(): Promise<ProductResponse[]> {
     const products: Product[] = await this.getProduct.execute();
-    const productResponses: ProductResponse[] = products.map(product => ProductResponse.fromDomain(product));
+    const productResponses: ProductResponse[] = products.map((product) =>
+      ProductResponse.fromDomain(product),
+    );
 
     return productResponses;
   }

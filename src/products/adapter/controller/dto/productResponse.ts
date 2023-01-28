@@ -1,4 +1,4 @@
-import { Product } from "../../../application/domain/product";
+import { Product } from '../../../application/domain/product';
 
 export class ProductResponse {
   constructor(id: string, name: string, category: string, price: number) {
@@ -13,12 +13,14 @@ export class ProductResponse {
   category: string;
   price: number;
 
-  static fromDomain: (product: Product) => ProductResponse = (product: Product) => {
+  static fromDomain: (product: Product) => ProductResponse = (
+    product: Product,
+  ) => {
     return new ProductResponse(
       product.id,
       product.name,
       product.category,
-      product.price
+      product.price,
     );
   };
 }

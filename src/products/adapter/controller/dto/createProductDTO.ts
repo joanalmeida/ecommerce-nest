@@ -11,7 +11,7 @@ export class CreateProductDTO {
 
   @IsString()
   name: string;
-  
+
   @IsString()
   category: string;
 
@@ -22,7 +22,7 @@ export class CreateProductDTO {
     return {
       name: this.name,
       category: this.category,
-      price: this.price
-    }
+      price: this.price,
+    };
   }
 }

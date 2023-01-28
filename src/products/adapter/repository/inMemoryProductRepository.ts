@@ -1,7 +1,7 @@
-import { Product } from "src/products/application/domain/product";
+import { Product } from 'src/products/application/domain/product';
 
 export class InMemoryProductRepository {
-  products: Map<string, Product>
+  products: Map<string, Product>;
   lastCreatedId: number;
 
   constructor() {
