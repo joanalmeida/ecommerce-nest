@@ -9,8 +9,7 @@ export class DbProductRepository {
   }
 
   async getAll(): Promise<Product[]> {
-    const prismaProducts: PrismaProduct[] =
-      await this.prisma.product.findMany();
+    const prismaProducts: PrismaProduct[] = await this.prisma.product.findMany();
     const products: Product[] = prismaProducts.map(this.toDomain);
     return products;
   }

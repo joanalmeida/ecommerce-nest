@@ -1,11 +1,4 @@
-import {
-  Body,
-  Controller,
-  Get,
-  Post,
-  UsePipes,
-  ValidationPipe,
-} from '@nestjs/common';
+import { Body, Controller, Get, Post, UsePipes, ValidationPipe } from '@nestjs/common';
 import { CreateProductUseCase } from '../../application/useCase/createProductUseCase';
 import { GetProductUseCase } from '../../application/useCase/getProductUseCase';
 import { Product } from '../../application/domain/product';

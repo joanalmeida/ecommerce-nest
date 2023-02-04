@@ -13,15 +13,8 @@ export class ProductResponse {
   category: string;
   price: number;
 
-  static fromDomain: (product: Product) => ProductResponse = (
-    product: Product,
-  ) => {
-    return new ProductResponse(
-      product.id,
-      product.name,
-      product.category,
-      product.price,
-    );
+  static fromDomain: (product: Product) => ProductResponse = (product: Product) => {
+    return new ProductResponse(product.id, product.name, product.category, product.price);
   };
 }
 
